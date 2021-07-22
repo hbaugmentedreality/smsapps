@@ -1,3 +1,5 @@
+/* CSS files add styling rules to your content */
+
 body {
   margin: 1em;
   padding: 0;
@@ -5,9 +7,8 @@ body {
   color: #244376;
 }
 
-
 #card {
-  margin: 3em auto;
+  margin: 1em auto;
   display: flex;
   flex-direction: column;
   max-width: 600px;
@@ -19,7 +20,8 @@ body {
 model-viewer {
   width: 100%;
   height: 400px;
-  background-color: #CECECE;
+  background-color: #F2F2F2;;
+  --poster-color: #eee;
 }
 
 .attribution {
@@ -35,7 +37,7 @@ model-viewer {
 
 .attribution img {
   opacity: 1;
-  height: 3em;
+  height: 2em;
 }
 
 .attribution .cc {
@@ -53,7 +55,8 @@ footer {
   line-height: 1.5em;
 }
 
-       /* This keeps child nodes hidden while the element loads */
+  
+        /* This keeps child nodes hidden while the element loads */
         :not(:defined) > * {
           display: none;
         }
@@ -139,3 +142,62 @@ footer {
             display: block;
           }
 
+
+        .slider {
+          width: 100%;
+          text-align: center;
+          overflow: hidden;
+          position: relative;
+        
+        }
+      
+        .slides {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .slide {
+          scroll-snap-align: start;
+          flex-shrink: 0;
+          width: 100px;
+          height: 100px;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-color:#F4F6F6;
+          margin-right: 10px;
+          border-radius: 10px;
+          border: none;
+          display: flex;
+        }
+
+        .slide.selected {
+          border: 2px solid #4285f4;
+        }
+
+        .slide:focus {
+          outline: none;
+        }
+
+        .slide:focus-visible {
+          outline: 1px solid #4285f4;
+        }
+    
+        #error {
+          background-color: #ffffffdd;
+          border-radius: 16px;
+          padding: 16px;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate3d(-50%, -50%, 0);
+          transition: opacity 0.3s;
+        }
+        #error.hide {
+          opacity: 0;
+          visibility: hidden;
+          transition: visibility 2s, opacity 1s 1s;
+        }
