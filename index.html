@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      rel="icon"
-      href="assets/favicon.png"
-      type="image/png"
-    />
+    <link rel="shortcut icon" href="favicon.ico" />
     <title>Festo SMS Pick and Place</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -42,14 +38,27 @@
         alt="ELGS-BS"
         ar-modes="webxr scene-viewer quick-look"
         shadow-intensity="1"
-        environment-intensity="1"
-        stage-light-intensity="1"
         camera-controls
         autoplay
         auto-rotate
         exposure="1"
         ar
       >
+        
+             
+        <button slot="ar-button" id="ar-button">
+          View in your space
+        </button>
+       
+        <div id="ar-prompt">
+          <img src="assets/images/hand.png" />
+        </div>
+    
+        <button id="ar-failure">
+          AR is not tracking!
+        </button>
+        
+        
         
        </model-viewer>
       
