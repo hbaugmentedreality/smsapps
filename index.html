@@ -45,8 +45,8 @@
     <div id="card">
    
       <model-viewer
-        src="assets/Models/SMSPickPlace.glb"
-        ios-src="assets/Models/SMSPickPlace.usdz"
+        src="assets/Models/EPCS_Anim.glb"
+        ios-src="assets/Models/EPCS_Anim.usdz"
        
         alt="SMSPickPlace"
         ar-modes="webxr scene-viewer"
@@ -96,16 +96,19 @@
  
       <div class="slider">
         <div class="slides">
+          
+           <button
+            class="slide"
+            onclick="switchSrc(this, 'EPCS_Anim')"
+            style="background-image: url('assets/images/EPCS_Anim.png');"
+          ></button>
+          
           <button
             class="slide selected"
             onclick="switchSrc(this, 'SMSPickPlace')"
             style="background-image: url('assets/images/SMSPickPlace.png');"
           ></button>
-          <button
-            class="slide"
-            onclick="switchSrc(this, 'EPCS_Anim')"
-            style="background-image: url('assets/images/EPCS_Anim.png');"
-          ></button>
+         
         </div>
       </div>
     </div>
